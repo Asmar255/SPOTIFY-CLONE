@@ -19,7 +19,7 @@ This is my first project—a Spotify clone built using HTML, CSS, and JavaScript
 ---
 
 ## 📸 Screenshots
-*(Add screenshots of your project here — e.g., desktop view, mobile view, and player controls)*  
+ 
 
 ---
 

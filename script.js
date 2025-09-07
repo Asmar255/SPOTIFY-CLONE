@@ -18,7 +18,7 @@ function formatTime(totalSeconds) {
 
 async function getsongs(folder) {
     currfolder = folder
-    let a = await fetch(`http://127.0.0.1:3000/COPY/songs/${folder}/`)
+    let a = await fetch(`/songs/${folder}/`)
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div")
@@ -59,7 +59,7 @@ async function getsongs(folder) {
 }
 
 const playmusic = (track, pause = false) => {
-    currentsong.src = `http://127.0.0.1:3000/COPY/songs/${currfolder}/` + track
+    currentsong.src = `/songs/${currfolder}/` + track
     if (!pause) {
         currentsong.play()
         play.src = "img/pause.svg"
@@ -69,7 +69,7 @@ const playmusic = (track, pause = false) => {
 }
 
 async function displayalbums(params) {
-    let a = await fetch(`http://127.0.0.1:3000/COPY/songs/`)
+    let a = await fetch(`/songs/`)
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div")
@@ -83,7 +83,7 @@ async function displayalbums(params) {
         if (e.href.includes("/songs")) {
             let folder = e.href.split("/").slice(-2)[0]
             //get the meta data ofe ach folder\
-            let a = await fetch(`http://127.0.0.1:3000/COPY/songs/${folder}/info.json`)
+            let a = await fetch(`/songs/${folder}/info.json`)
             let response = await a.json();
             console.log(response)
             cardcontainer.innerHTML = cardcontainer.innerHTML + `<div data-folder="${folder}" class="card ">
@@ -105,7 +105,7 @@ async function displayalbums(params) {
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
             songs = await getsongs(`${item.currentTarget.dataset.folder}`)
-            playMusic(songs[0])
+            playmusic(songs[0])
         })
     })
    
