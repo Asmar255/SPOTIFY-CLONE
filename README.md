@@ -20,6 +20,15 @@ This is my first project—a Spotify clone built using HTML, CSS, and JavaScript
 
 ## 📸 Screenshots
  
+ ### 🖥️ Desktop View
+![Desktop Screenshot](picture/desktopview.PNG)
+
+### 📱 Mobile View
+<p align="center">
+  <img src="picture/mobile view.PNG" alt="mobile view" width="49%">
+  <img src="picture/mobile view with songlist.PNG" alt="Mobile View" width="49%">
+</p>
+
 
 ---
 
