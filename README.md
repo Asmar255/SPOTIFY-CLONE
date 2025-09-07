@@ -26,4 +26,4 @@ This is my first project—a Spotify clone built using HTML, CSS, and JavaScript
 ## 📂 Project Setup
 1. Clone the repository  
    ```bash
-   git clone 
+   git clone https://github.com/Asmar255/SPOTIFY-CLONE.git
